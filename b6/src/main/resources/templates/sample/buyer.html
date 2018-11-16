@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<h1> BUYER PAGE </h1> 
+<div sec:authorize="hasRole('MEMBER')">MEMBER MENU</div>
+<div sec:authorize="hasRole('BUYER')">BUYER MENU</div>
+<div sec:authorize="hasRole('ADMIN')">ADMIN MENU</div>
+<div sec:authorize="isAuthenticated()">LOGIN</div>
+</body>
+</html>
